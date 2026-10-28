@@ -1,0 +1,237 @@
+.frame-home {
+  max-width: 1184px;
+  padding-top: 48px;
+}
+.home-start {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  align-items: center;
+  gap: 64px;
+  padding: 20px 0 56px;
+}
+.home-start h1 {
+  font-size: clamp(36px, 4.3vw, 54px);
+  font-weight: 650;
+  letter-spacing: -0.045em;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+.home-start-copy > p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+.home-start-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: 30px;
+}
+.home-start-actions .primary {
+  min-height: 50px;
+  padding: 14px 24px;
+  font-size: 16px;
+  gap: 22px;
+}
+.home-new-session {
+  min-height: 44px;
+  border: 0;
+  background: transparent;
+  padding: 8px 4px;
+  font-size: 14px;
+  color: var(--accent);
+}
+.home-new-session:hover {
+  text-decoration: underline;
+}
+.home-demo-note {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+  margin-top: 16px;
+}
+.home-example {
+  margin: 0;
+  min-width: 0;
+  background: var(--paper);
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 8px 28px #1d1d1f06;
+}
+.home-example-image {
+  position: relative;
+  background: #bfcbbf;
+}
+.home-example .scene {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.home-example-label {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  color: #fff;
+  background: #19362ad9;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.home-example figcaption {
+  padding: 16px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.home-example figcaption p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+.home-example-switch {
+  display: inline-flex;
+  gap: 2px;
+  border-radius: 9px;
+  background: #f1f2f3;
+  padding: 3px;
+}
+.home-example-switch button {
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  border-radius: 6px;
+  padding: 8px 12px;
+  min-height: 38px;
+  font-size: 13px;
+}
+.home-example-switch button[aria-pressed="true"] {
+  color: var(--ink);
+  background: #fff;
+  box-shadow: 0 1px 4px #00000012;
+}
+.home-explore {
+  border-top: 1px solid var(--line);
+  padding-top: 32px;
+}
+.home-explore h2 {
+  font-size: 20px;
+  letter-spacing: -0.02em;
+  margin-bottom: 18px;
+}
+.home-shortcuts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+.home-shortcuts > a {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 23px 20px;
+  background: var(--paper);
+  border-radius: 16px;
+  transition: background 150ms;
+  min-width: 0;
+}
+.home-shortcuts > a:hover {
+  background: #eaf0ed;
+}
+.home-shortcut-icon {
+  flex: none;
+  color: var(--accent);
+  display: grid;
+  place-items: center;
+}
+.home-shortcuts h3 {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 4px;
+  letter-spacing: 0;
+}
+.home-shortcuts p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+.home-shortcuts > a > svg {
+  margin-left: auto;
+  color: #85898b;
+}
+.home-records {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 64px;
+  margin-top: 24px;
+  color: var(--muted);
+  font-size: 14px;
+}
+.home-records small {
+  margin-left: 12px;
+  font-size: 13px;
+}
+@media (max-width: 1000px) {
+  .home-start {
+    gap: 32px;
+  }
+  .home-shortcuts {
+    grid-template-columns: 1fr;
+    gap: 1px;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  .home-shortcuts > a {
+    border-radius: 0;
+  }
+  .home-shortcuts > a:focus-visible {
+    outline-offset: -3px;
+  }
+}
+@media (max-width: 680px) {
+  .frame-home {
+    padding-top: 32px;
+  }
+  .home-start {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 0 0 32px;
+  }
+  .home-start h1 {
+    font-size: 34px;
+    margin-bottom: 12px;
+  }
+  .home-start-copy > p {
+    font-size: 15px;
+  }
+  .home-start-actions {
+    margin-top: 22px;
+  }
+  .home-demo-note {
+    margin-top: 12px;
+  }
+  .home-example {
+    border-radius: 18px;
+  }
+  .home-example figcaption {
+    padding: 12px 16px;
+    gap: 10px;
+  }
+  .home-example-switch button {
+    min-height: 44px;
+  }
+  .home-example-label {
+    top: 12px;
+    left: 12px;
+  }
+  .home-explore {
+    padding-top: 24px;
+  }
+  .home-shortcuts > a {
+    padding: 18px;
+  }
+}
